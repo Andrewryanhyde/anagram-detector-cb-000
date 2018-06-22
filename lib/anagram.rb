@@ -5,20 +5,13 @@ class Anagram
   def initialize(anagram)
     @anagram = anagram
   end
+   
 
-  def match(array)
-    matches_array = []
-    newArray = array.split(",")
-    newArray.each do |word|
-      letter_array = word.split("")
-      if letter_array.sort == array
-        matches_array << word
-      else
-        matches_array
+    def match(array)
+      array.select do |word|
+        word.split("").sort == @anagram.split("").sort
       end
-    end      
-
-  end
+    end
 
 
 
