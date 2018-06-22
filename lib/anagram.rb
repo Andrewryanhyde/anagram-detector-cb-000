@@ -5,7 +5,7 @@ class Anagram
   def initialize(anagram)
     @anagram = anagram
   end
-   
+
 
     def match(array)
       array.select do |word|
